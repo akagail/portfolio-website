@@ -1,0 +1,1285 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: rgb(42,39,55);
+	background: linear-gradient(180deg, rgba(42,39,55,1) 27%, rgba(76,72,105,1) 69%, rgba(255,255,255,1) 100%);
+    font-size:14px;
+}
+
+.container {
+	position: relative;
+    border: 1px solid black;
+    height: 200px;
+	margin: -8;
+}
+
+.dropdown {
+	display: none;
+}
+
+/* navigation bar css */
+#navigation {
+	overflow: hidden;
+	width: 100%;
+	margin: 0px;
+	margin-right: 30px;
+	z-index: 1000;
+}
+
+/* logo */
+#logo {
+	height: 100px;
+	width: 100px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	object-fit: fill;
+	transition: box-shadow 300ms ease-out 67ms;
+}
+
+#logo:hover {
+	box-shadow: 5px 5px 18px 9px #2c2c2c;
+  }
+
+/* a hrefs in the navbar */
+.link {
+	width: 100px;
+	margin: auto;
+	padding: 8px 20px;
+	font-family: sans-serif;
+	font-size: 21px;
+	text-decoration: none;
+	color: white;
+	position: relative;
+	transition: all .3s cubic-bezier(.2, 0, 0, 1);
+	z-index: 1;
+	
+&:after {
+	content: '';
+	display: block;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	right: 1.25rem;
+	left: 1.25rem;
+	background-color: lightgray;
+	transition: all .3s cubic-bezier(.2, 0, 0, 1);
+	transform-origin: bottom center;
+	z-index: -1;
+	}
+	
+&:hover {
+	color: #2D2D2D;
+
+&:after {
+	right: 0;
+	left: 0;
+	height: 100%;
+	}
+	}
+}
+
+/* .nav_container {
+	text-align: center;
+	background-color: #3D3C42;
+	width: 100%;
+	border-radius: 10px;
+} */
+
+/* navbar style */
+#navigation ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	height: 90px;
+	width: 100%;
+	overflow: hidden;
+	background-color: #3D3C42;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.nav_link {
+	padding: 25px;
+	float: left;
+}
+
+/* Hero Section */
+div.intro {
+	/* border: 1px solid white; */
+	margin-top: -20px;
+	width: 100%;
+	height: 700px;
+}
+
+div.intro .heading_text_container {
+	border: 0px dashed red;
+	width: 49.7%;
+	height: 100%;
+	float: left;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+div.intro .heading_text {
+	border: 0px solid white;
+	position: relative;
+	width: 90%;
+	height: 75%;
+	margin-left: 45px;
+	margin-top: 20px;
+}
+
+.heading_text p#greet {
+	position: relative;
+	font-family: "Raleway", sans-serif;
+	font-size: 42px;
+	font-weight: 500;
+	font-style: normal;
+	color: white;
+}
+
+.heading_text p#greet small {
+	font-size: 20px;
+}
+
+.heading_text .name_container {
+	position: relative;
+	border: 0px solid white;
+	margin-top: -50px;
+}
+
+.heading_text #name {
+	font-size: 60px;
+	font-weight: 550;
+	font-family: "Helvetica", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: auto;
+	font-style: normal;
+	color: white;
+}
+
+.name_container #name {
+	width: 88%;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: 1px;
+	animation: 
+	  typing 4s steps(40, end),
+	  blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 88% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: orange; }
+  }
+
+
+div.intro .picture_container {
+	border: 0px dashed black;
+	width: 50%;
+	height: 100%;
+	float: right;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.picture_container .picture {
+	position: relative;
+	text-align: center;
+	height: 75%;
+	width: 75%;
+	border: 0px solid white;
+	background: rgb(76,72,105);
+	background: radial-gradient(circle, rgba(76,72,105,0.8575805322128851) 0%, rgba(60,57,80,1) 0%, rgba(255,255,255,1) 100%);
+	border-radius: 10000px;
+}
+
+.picture img {
+	height: 100%;
+	width: 100%;
+	border-radius: 100000px;
+}
+
+.picture_container .passive_ping {
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 30px;
+	animation: ping 2s ease 0s infinite normal forwards;
+}
+
+.picture_container .passive_ping_2 {
+	height: 30px;
+	width: 30px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 70px;
+	animation: ping 2.1s ease 0s infinite normal forwards;
+}
+
+.picture_container .passive_ping_3 {
+	height: 20px;
+	width: 20px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 90px;
+	animation: ping 2.12s ease 0s infinite normal forwards;
+}
+
+@keyframes ping {
+	0% {
+		opacity: 0.8;
+		transform: scale(0.2);
+	}
+
+	80% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(2.2);
+	}
+}
+
+.desc_container table, tr, td {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	overflow: hidden;
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+}
+
+.desc_container table {
+	margin-left: -50px;
+	margin-top: -10px;
+}
+
+.desc_container td {
+	display: block;
+	color: white;
+	padding: 14px 56px;
+	font-size: 22px;
+	border-right: 1px solid white;
+	font-family: "Raleway", sans-serif;
+}
+
+.desc_container td:last-child {
+	border-right: none;
+}
+
+.heading_text .quick_desc {
+	border: 0px dashed red;
+	width: 90%;
+	height: 245px;
+	margin: 0 auto;
+}
+
+.quick_desc p {
+	font-size: 20px;
+	font-family: "Raleway", sans-serif;
+	margin-left: 15px;
+	color: white;
+}
+
+/* Skills Section */
+#skills_bg {
+	position: relative;
+	margin-top: 10px;
+	border: 0px solid white;
+	width: 100%;
+	height: 770px;
+	border-radius: 20px;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,1) 24%, rgba(76,72,105,1) 100%, rgba(42,39,55,1) 100%);
+}
+
+/* fade from bottom animation variable for js */
+.animate {
+	opacity: 0;
+	transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	transition-delay: 0.5s;
+}
+
+.animate.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.skills_heading {
+	position: relative;
+	top: 50px;
+	margin-top: 55px;
+	margin-left: 6%;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(42,39,55);
+	font-size: 50px;
+}
+
+.about_me_pic {
+	position: relative;
+	height: 70%;
+	width: 25%;
+	border: 0px solid black;
+	margin-left: 6%;
+	float: left;
+	text-align: center;
+}
+
+.about_me_pic img {
+	position: relative;
+	height: 90%;
+	width: 85%;
+	top: 5%;
+	border-radius: 10px;
+}
+
+#about_me_desc {
+	position: relative;
+	height: 20%;
+	width: 60%;
+	border: 0px dashed red;
+	float: left;
+	margin-left: 2%;
+}
+
+#about_me_desc p {
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+#skills_list {
+	height: 48.5%;
+	width: 60%;
+	border-top: 1px solid black;
+	float: left;
+	margin-left: 2%;
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#personal_skills {
+	position: absolute;
+	top: 44%;
+	margin-top: 0px;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(42,39,55);
+	font-size: 50px;
+}
+
+#cplus_skill {
+	border: 0px solid yellow;
+	width: 200px;
+	height: 125px;
+	float: left;
+	border-radius: 10px;
+}
+
+#cplus_skill img {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	transition: width 1s, height 1s ease-in-out;
+}
+
+#cplus_skill img:hover {
+	transform: scale(1.1);
+}
+
+#py_skill {
+	border: 0px solid yellow;
+	width: 200px;
+	height: 125px;
+	float: left;
+}
+
+#py_skill img {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	transition: width 1s, height 1s ease-in-out;
+}
+
+#py_skill img:hover {
+	transform: scale(1.1);
+}
+
+#js_skill {
+	border: 0px solid yellow;
+	width: 200px;
+	height: 125px;
+	float: left;
+}
+
+#js_skill img {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	transition: width 1s, height 1s ease-in-out;
+}
+
+#js_skill img:hover {
+	transform: scale(1.1);
+}
+
+#vb_skill {
+	border: 0px solid yellow;
+	width: 200px;
+	height: 125px;
+	float: left;
+}
+
+#vb_skill img {
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	transition: width 1s, height 1s ease-in-out;
+}
+
+#vb_skill img:hover {
+	transform: scale(1.1);
+}
+
+/* Projects section */
+.projects_container {
+	position: relative;
+	margin-top: 10px;
+	border: 0px solid white;
+	width: 100%;
+	height: 770px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.projects_container ul {
+	position: absolute;
+	visibility: hidden;
+}
+
+.projects_container h1 {
+	position: absolute;
+	font-family: "Poppins", sans-serif;
+	font-size: 50px;
+	top: 0;
+	color: white;
+}
+	
+#online_resume {
+	width: 400px;
+	height: 300px;
+	border: 0px solid yellow;
+}
+
+#online_resume img {
+	position: relative;
+	top: 10%;
+	height: 80%;
+	width: 100%;
+	border-radius: 10px;
+}
+
+#rockpaperscissors {
+	width: 400px;
+	height: 300px;
+	border: 0px solid yellow;
+}
+
+#rockpaperscissors img {
+	position: relative;
+	top: 10%;
+	height: 80%;
+	width: 100%;
+	border-radius: 10px;
+}
+
+#online_calcu {
+	width: 400px;
+	height: 300px;
+	border: 0px solid yellow;
+}
+
+#online_calcu img {
+	position: relative;
+	top: 10%;
+	height: 80%;
+	width: 100%;
+	border-radius: 10px;
+}
+
+#online_resume_desc {
+	width: 400px;
+	height: 100px;
+	border: 0px solid yellow;
+}
+
+#rockpaperscissors_desc {
+	width: 400px;
+	height: 100px;
+	border: 0px solid yellow;
+}
+
+#online_calcu_desc {
+	width: 400px;
+	height: 100px;
+	border: 0px solid yellow;
+}
+
+#project_desc {
+	margin-top: -50px;
+}
+
+.projects_container td {
+	font-family: "Raleway", sans-serif;
+	font-weight: 300;
+	font-size: 30px;
+	color: white;
+}
+
+/* Contacts Section */
+#contact_container {
+	position: relative;
+	margin-top: 10px;
+	border: 0px solid white;
+	width: 100%;
+	height: 770px;
+	border-radius: 20px;
+	background: rgb(255,255,255);
+	background: linear-gradient(1deg, rgba(255,255,255,1) 18%, rgba(76,72,105,0.45) 100%);
+}
+
+#contact_container h1 {
+	position: relative;
+	font-family: "Poppins", sans-serif;
+	font-size: 50px;
+	top: 0;
+	margin-left: 6%;
+	color: white;
+}
+
+#comments {
+	position: absolute;
+	height: 500px;
+	width: 35%;
+	border: 1px solid black;
+	float: left;
+	margin-left: 10%;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	resize: none;
+}
+
+#comments_container {
+	border: 0px solid yellow;
+	height: 70%;
+	width: 40%;
+	float: left;
+}
+
+#for_comments p {
+	position: relative;
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+	top: 0;
+	margin-left: 16.5%;
+	color: white;
+}
+
+#for_comments label {
+	margin-left: 10%;
+}
+
+#information {
+	border: 0px solid black;
+	width: 50%;
+	height: 70%;
+	margin-left: 120px;
+	float: left;
+}
+
+#for_info p {
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+	color: white;
+}
+
+#fname {
+	margin-left: 6%;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	width: 70%;
+	height: 32px;
+	margin-top: 7.5%;
+	margin-bottom: 4%;
+}
+
+#lname {
+	margin-left: 6%;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	width: 70%;
+	height: 32px;
+	margin-bottom: 4%;
+}
+
+#contactno {
+	margin-left: 6%;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	width: 70%;
+	height: 32px;
+	margin-bottom: 4%;
+}
+
+#email {
+	margin-left: 6%;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	width: 70%;
+	height: 32px;
+	margin-bottom: 4%;
+}
+
+.icons {
+	height: 50px;
+	width: 50px;
+}
+
+#information table {
+	border: 0px solid black;
+	margin-left: 3.5%;
+	z-index: 100;
+}
+
+#information button {
+	float: right;
+	margin-right: 23.1%;
+	position: relative;
+	top: -100px;
+}
+
+#information button {
+    position: relative;
+    margin-top: 50px;
+    --bg: rgb(42,39,55);
+    --hover-bg: white;
+    --hover-text: rgb(42,39,55);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+}
+      
+#information button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+}
+      
+#information button:active {
+    transform: translate(0);
+    box-shadow: none;
+}
+
+.footer h1 {
+	font-family: "Segoe UI", sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	text-align: center;
+}
+
+@media screen and (max-width:480px) {
+	/* .name_container #name {
+		color: black;
+	} */
+
+	body {
+		overflow-x: hidden;
+	};
+
+	.navi ul .nav_link {
+		display: none;
+	}
+
+	li.nav_link a.link {
+		display: none;
+	}
+
+	.navi #top_logo {
+		position: absolute;
+		display: block;
+	}
+
+	.nav_container {
+		width: 100%;
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown {
+		display: none;
+		position: relative;
+		background: rgb(255,255,255);
+		background: linear-gradient(1deg, rgba(255,255,255,1) 18%, rgba(76,72,105,0.45) 100%);
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		padding: 12px 16px;
+		z-index: 1;
+		height: 180px;
+		width: 415px;
+		margin-top: 5px;
+		border-radius: 10px;
+	}
+
+	.link {
+		width: 100px;
+		margin: auto;
+		padding: 8px 20px;
+		font-family: sans-serif;
+		font-size: 21px;
+		text-decoration: none;
+		color: white;
+		position: relative;
+		transition: all .3s cubic-bezier(.2, 0, 0, 1);
+		z-index: 1;
+		
+	&:after {
+		content: '';
+		display: block;
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		right: 1.25rem;
+		left: 1.25rem;
+		background-color: rgb(42, 39, 55);
+		transition: all .3s cubic-bezier(.2, 0, 0, 1);
+		transform-origin: bottom center;
+		z-index: -1;
+		}
+		
+	&:hover {
+		color: white;
+	
+	&:after {
+		right: 0;
+		left: 0;
+		height: 100%;
+		}
+		}
+	}
+
+	.navi:hover .dropdown {
+		display: block;
+	}
+
+	.navi.sticky:hover .dropdown {
+		display: block;
+	}
+
+	/* Hero Section */
+	div.intro {
+		border: 0px solid white;
+		margin-top: 50px;
+		width: 100%;
+		height: 700px;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	div.intro .heading_text_container {
+		border: 0px dashed red;
+		width: 100%;
+		height: 100%;
+		float: left;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	div.intro .heading_text {
+		border: 0px solid white;
+		position: relative;
+		width: 90%;
+		height: 75%;
+		margin-left: 0px;
+		margin-top: -200px;
+	}
+
+	.heading_text p#greet {
+		position: relative;
+		font-family: "Raleway", sans-serif;
+		font-size: 32px;
+		font-weight: 500;
+		font-style: normal;
+		color: white;
+	}
+
+	.heading_text p#greet small {
+		font-size: 15px;
+	}
+
+	.heading_text .name_container {
+		position: relative;
+		border: 0px solid white;
+		margin-top: -30px;
+	}
+
+	.heading_text #name {
+		font-size: 40px;
+		font-weight: 550;
+		font-family: "Helvetica", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: auto;
+		font-style: normal;
+		color: white;
+	}
+
+	.name_container #name {
+		width: 93%;
+		overflow: hidden; /* Ensures the content is not revealed until the animation */
+		border-right: .15em solid orange; /* The typwriter cursor */
+		white-space: nowrap; /* Keeps the content on a single line */
+		margin: 0; /* Gives that scrolling effect as the typing happens */
+		letter-spacing: 1px;
+		animation: 
+		  typing 4s steps(40, end),
+		  blink-caret .75s step-end infinite;
+	}
+	  
+	  /* The typing effect */
+	  @keyframes typing {
+		from { width: 0 }
+		to { width: 88% }
+	}
+	  
+	  /* The typewriter cursor effect */
+	  @keyframes blink-caret {
+		from, to { border-color: transparent }
+		50% { border-color: orange; }
+	}
+	
+	div.intro .picture_container {
+		border: 0px dashed black;
+		width: 50%;
+		height: 50%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.picture_container .picture {
+		position: relative;
+		text-align: center;
+		height: 75%;
+		width: 75%;
+		border: 1px solid white;
+		background: rgb(76,72,105);
+		background: radial-gradient(circle, rgba(76,72,105,0.8575805322128851) 0%, rgba(60,57,80,1) 0%, rgba(255,255,255,1) 100%);
+		border-radius: 10000px;
+	}
+
+	.desc_container table, tr, td {
+		list-style-type: none;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		overflow: hidden;
+		margin: 0;
+		padding: 0px;
+		text-align: center;
+	}
+
+	.desc_container table {
+		margin-left: -50px;
+		margin-top: -0px;
+	}
+
+	.desc_container td {
+		display: block;
+		color: white;
+		padding: 8px 26px;
+		font-size: 16px;
+		border-right: 1px solid white;
+		font-family: "Raleway", sans-serif;
+	}
+
+	/* Skills Section */
+	#skills_bg {
+		position: relative;
+		margin-top: -20px;
+		border: 0px solid white;
+		width: 100%;
+		height: 770px;
+		border-radius: 20px;
+		background: rgb(255,255,255);
+		background: linear-gradient(180deg, rgba(255,255,255,1) 24%, rgba(76,72,105,1) 100%, rgba(42,39,55,1) 100%);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.skills_heading {
+		position: relative;
+		top: 10px;
+		margin: 0 auto;
+		font-family: 'Poppins', sans-serif;
+		color: rgb(42,39,55);
+		font-size: 50px;
+	}
+
+	.about_me_pic {
+		position: relative;
+		height: 0%;
+		width: 0%;
+		border: 0px solid black;
+		margin-left: 6%;
+		float: left;
+		text-align: center;
+	}
+
+	.about_me_pic img {
+		position: relative;
+		height: 90%;
+		width: 85%;
+		top: 5%;
+		border-radius: 10px;
+		display: none;
+	}
+
+	#about_me_desc {
+		position: relative;
+		height: 50%;
+		width: 96%;
+		border: 0px dashed red;
+		float: left;
+		margin-left: 2%;
+	}
+
+	#skills_list {
+		height: 48.5%;
+		width: 96%;
+		margin-top: 50px;
+		float: left;
+		margin: 0 auto;
+		border-top: 1px solid black;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	#personal_skills {
+		position: absolute;
+		top: 44%;
+		margin-top: 110px;
+		font-family: 'Poppins', sans-serif;
+		color: rgb(42,39,55);
+		font-size: 50px;
+	}
+
+	#skills_list table, #skills_list tr {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
+
+	#skills_list td {
+		padding: 10px;
+		flex: 0 0% 50%;
+	}
+
+	#cplus_skill {
+		border: 0px solid yellow;
+		width: 150px;
+		height: 93.75px;
+		float: left;
+		border-radius: 10px;
+	}
+	
+	#cplus_skill img {
+		height: 100%;
+		width: 100%;
+		border-radius: 10px;
+	}
+	
+	#py_skill {
+		border: 0px solid yellow;
+		width: 150px;
+		height: 93.75px;
+		float: left;
+	}
+	
+	#py_skill img {
+		height: 100%;
+		width: 100%;
+		border-radius: 10px;
+	}
+	
+	#js_skill {
+		border: 0px solid yellow;
+		width: 150px;
+		height: 93.75px;
+		float: left;
+	}
+	
+	#js_skill img {
+		height: 100%;
+		width: 100%;
+		border-radius: 10px;
+	}
+	
+	#vb_skill {
+		border: 0px solid yellow;
+		width: 150px;
+		height: 93.75px;
+		float: left;
+	}
+	
+	#vb_skill img {
+		height: 100%;
+		width: 100%;
+		border-radius: 10px;
+	}
+
+
+
+	/* Projects section */
+	.projects_container {
+		position: relative;
+		margin-top: 10px;
+		border: 1px solid white;
+		width: 100%;
+		height: 770px;
+		border-radius: 20px;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.projects_container h1 {
+		position: absolute;
+		font-family: "Poppins", sans-serif;
+		font-size: 50px;
+		top: 0;
+		color: white;
+	}
+
+	.projects_container table {
+		visibility: hidden;
+		position: absolute;
+	}
+
+	.projects_container ul {
+		visibility: visible;
+		list-style-type: none;
+		position: relative;
+		margin-top: 80px;
+		margin-left: 40px;
+	}
+
+	li.listImage img {
+		position: relative;
+		margin-left: -20px;
+		display: block;
+		width: 90%;
+		height: auto;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		box-shadow: 5px 5px dimgray;
+	}
+
+	.img-container {
+		position: relative;
+		display: inline-block;
+	}
+
+	label.img_label {
+		position: absolute;
+		top: 10px;
+		left: 30px;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		padding: 5px;
+		border-radius: 5px;
+		font-size: 14px;
+		z-index: 10;
+	}
+
+	label.img_label2 {
+		position: absolute;
+		top: 195px;
+		left: 30px;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		padding: 5px;
+		border-radius: 5px;
+		font-size: 14px;
+		z-index: 10;
+	}
+
+	label.img_label3 {
+		position: absolute;
+		top: 385px;
+		left: 30px;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		padding: 5px;
+		border-radius: 5px;
+		font-size: 14px;
+		z-index: 10;
+	}
+	
+	#project_desc {
+		margin-top: -50px;
+	}
+
+	/* Contacts Section */
+	#contact_container {
+		position: relative;
+		margin-top: 10px;
+		border: 0px solid white;
+		width: 100%;
+		height: 770px;
+		border-radius: 20px;
+		background: rgb(255,255,255);
+		background: linear-gradient(1deg, rgba(255,255,255,1) 18%, rgba(76,72,105,0.45) 100%);
+	}
+
+	#contact_container h1 {
+		position: relative;
+		font-family: "Poppins", sans-serif;
+		font-size: 50px;
+		margin: 0 auto;
+		margin-left: 17%;
+		top: 0;
+		color: white;
+	}
+
+	#comments {
+		position: absolute;
+		height: 200px;
+		width: 80%;
+		border: 1px solid black;
+		float: left;
+		margin-left: 10%;
+		font-family: "Raleway", sans-serif;
+		font-size: 20px;
+		resize: none;
+	}
+
+	#comments_container {
+		border: 0px solid yellow;
+		height: 35%;
+		width: 40%;
+		float: left;
+	}
+
+	#information {
+		border: 0px solid black;
+		width: 80%;
+		height: 50%;
+		margin-left: 10%;
+		float: left;
+	}
+
+	#fname {
+		margin-left: 6%;
+		font-family: "Raleway", sans-serif;
+		font-size: 20px;
+		width: 85%;
+		height: 32px;
+		margin-top: 7.5%;
+		margin-bottom: 4%;
+	}
+
+	#lname {
+		margin-left: 6%;
+		font-family: "Raleway", sans-serif;
+		font-size: 20px;
+		width: 85%;
+		height: 32px;
+		margin-bottom: 4%;
+	}
+	
+	#contactno {
+		margin-left: 6%;
+		font-family: "Raleway", sans-serif;
+		font-size: 20px;
+		width: 85%;;
+		height: 32px;
+		margin-bottom: 4%;
+	}
+	
+	#email {
+		margin-left: 6%;
+		font-family: "Raleway", sans-serif;
+		font-size: 20px;
+		width: 85%;
+		height: 32px;
+		margin-bottom: 4%;
+	}
+
+	.icons {
+		height: 50px;
+		width: 50px;
+		margin-left: 5px;
+	}
+
+	#information button {
+		float: right;
+		margin-right: 6.5%;
+		position: relative;
+		top: -100px;
+	}
+}
